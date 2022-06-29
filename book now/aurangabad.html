@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 600px;
+            width: 100%;
+        }
+        #city{
+            text-align: center;
+            position: relative;
+            z-index: 200;
+             top:-370px;
+            color :white;
+            font-size: 48px;
+            font-weight: 700;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #content{
+            height: 354px;
+            text-align: center;
+            margin-top: -100px;
+            margin-left: 200px;
+            margin-right: 200px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* overflow: scroll; */
+            
+        }
+        #content>div{
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: gray;
+        }
+        h1:nth-child(1){
+            font-size: 36px;
+            margin-bottom: -20px;
+        }
+        h1:nth-child(2){
+            font-size: 48px;
+            color: #F15824;
+            font-weight: 700;
+            
+        }
+        #show>div{
+            color: grey;
+        }
+        #show{
+            display: none;
+            margin-top: -20px;
+        }
+        button{
+            background-color: white;
+            color: #F15824;
+            border: 0px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        #showMore{
+            /* margin-left: 45%; */
+        }
+        #showless{
+            display: none;
+            text-align: center;
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.tourradar.com/s3/tour/1500x800/5562_fc3eb5.jpg" alt="">
+    <H1 id="city">AURANGABAD</H1>
+    <div id="content">
+    <h1>Welcome to </h1>
+    <h1>Aurangabad</h1>
+    <div>The old forts, age-old eateries, and museums narrate their own tales. The distinctive scent of naan qualia tingles both your nose and taste buds. And with gorgeous sunsets over the sky like a giant painting, Aurangabad breaks all stereotypes one wonder at a time. Welcome to a city with rich heritage, stupendous monuments, and world-famous caves.</div>
+    <button id="showMore"><h4>Show More</h4><button>
+    <div id="show">
+    <h2>Why we love Aurangabad</h2>
+    <div>A renowned UNESCO world heritage site, the Ellora caves were entirely carved out of a single mountain between the early ages of the 6th & 8th century. They house the mind-boggling Kailash Temple, which is the largest structure cut out of a single rock. What’s the best part? Nobody knows HOW the caves were made!
+
+        Dishes of the Mughlai cuisine like the famous Naan qualia and Chicken Kentucky find their roots in the city, treating each traveller with a joyride of flavours on their tongues. There’s also a very famous paan centre here, with its most expensive paan costing INR 5,000!
+        
+        Aurangabad is a treasure trove of history, architecture, and textiles alike. Exploring its sinewy streets will open up a lot of stories for you, which are all worth digging into.
+        
+        </div>
+        <h2>Fun Facts</h2>
+        <div>“The last Mughal Capital”, “The City of Gates”, “The Tourist Capital of Maharashtra”- Aurangabad goes by many nicknames that reveal its historical significance, beauty, and culture alike.
+
+            The Bibi Ka Maqbara, often confused with the Taj Mahal, is a gorgeous monument in Aurangabad. It was built by Aurangzeb’s son and he dedicated it to his mother. The fun fact is, it was built for a prize 45 times less than the Taj Mahal!
+            
+            Aurangabad was a gated city, with 52 mammoth gates protecting it on all of its borders. Some of these gates still exist in the old city, depicting different stories through their architecture.</div>
+            <button id="showless"><h4>Show Less</h4></button>
+            </div>
+          
+            </div>
+</body>
+</html>
+<script>
+    document.querySelector("#showMore").addEventListener("click",displaycontent)
+    function displaycontent(){
+        document.querySelector("#show").style.display="block"
+        document.querySelector("#showMore").style.display="none"
+        document.querySelector("#showless").style.display="block"
+    }
+    document.querySelector("#showless").addEventListener("click",displaycontent1)
+    function displaycontent1(){
+        document.querySelector("#show").style.display="none"
+        document.querySelector("#showMore").style.display="block"
+        document.querySelector("#showMore").style.margin ="0 0 0 45%"
+
+              document.querySelector("#showless").style.display="none"
+    }
+    
+</script>

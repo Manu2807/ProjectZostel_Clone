@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zostel</title>
+    <link rel="stylesheet" href="slideshow1.css">
+    <script src="https://kit.fontawesome.com/c8cbe03164.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- START OF NAVBAR -->
+    <!--  -->
+    <!--  -->
+    <div id="navbar">
+        <div id="navlogo">
+            <img src="data:image/png;base64,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"alt="">
+            <h2> Z&nbspO&nbspS&nbspT&nbspE&nbspL</h2>
+        </div>
+        <div id="navContent">
+            <ul>
+                <li class="navhidden"><h3>Destinations</h3></li>
+                <li >
+                    <h3>Zostel </h3>
+                    <div id="icon1">
+                        <i class="fa-solid fa-angle-down" ></i>
+                    </div>
+                   
+                    <div id="dropdown1">
+                        <div id="drop1">
+                      <div><a href="aurangabad.html">Zostel Aurangabad   </a>  </div>
+                      <div><a href="aurangabad.html">Zostel Jodhpur      </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Pokhara      </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Bangalore    </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Kathmandu    </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Pushkar      </a>         </div>
+                      <div><a href="aurangabad.html">Zostel Rishekesh    </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Bhopsl       </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Indore       </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Delhi        </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Gangtok      </a>       </div>
+                      <div><a href="aurangabad.html">Zostel Jaipur       </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Goa          </a>  </div>
+                      <div><a href="aurangabad.html">Zostel Leh          </a> </div>
+                      <div><a href="aurangabad.html">Zostel Spiti        </a>      </div>
+                      <div><a href="aurangabad.html">Zostel Cochin       </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Raipur       </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Shimla       </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Odisha       </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Ooty         </a>         </div>
+                      <div><a href="aurangabad.html">Zostel Mysore       </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Mumbai       </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Chennai      </a>       </div>
+                      <div><a href="aurangabad.html">Zostel Kerala       </a>             </div>
+                      <div><a href="aurangabad.html">Zostel Punjab       </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Kolkata      </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Srinagar     </a>      </div>
+                      <div><a href="aurangabad.html">Zostel Udaipur      </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Ranchi       </a>      </div>
+                      <div><a href="aurangabad.html">Zostel Burma        </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Nepal        </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Assam        </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Manipur      </a> </div>
+                      <div><a href="aurangabad.html">Zostel Chitkul      </a> </div>
+                      <div><a href="aurangabad.html">Zostel Manali       </a>   </div>
+                      <div><a href="aurangabad.html">Zostel Rajasthan    </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Dehradun     </a>    </div>
+                      <div><a href="aurangabad.html">Zostel Manipur      </a>     </div>
+                      <div><a href="aurangabad.html">Zostel Sikkim       </a>       </div>
+                      </div></p>
+                    </div></p>
+                
+                </li>
+                <li >
+                    <h3>Zostel Homes</h3>
+                    <div id="icon2">
+                        <i class="fa-solid fa-angle-down" ></i>
+                    </div>
+                   
+                    <div id="dropdown2">
+                        <div id="drop2">
+                      <div><a href="">Zostel Homes  Aurangabad  </a>  </div>
+                      <div><a href="">Zostel Homes Jodhpur      </a>   </div>
+                      <div><a href="">Zostel Homes Pokhara      </a>   </div>
+                      <div><a href="">Zostel Homes Bangalore    </a>    </div>
+                      <div><a href="">Zostel Homes Kathmandu    </a>   </div>
+                      <div><a href="">Zostel Homes Pushkar      </a>         </div>
+                      <div><a href="">Zostel Homes Rishekesh    </a>    </div>
+                      <div><a href="">Zostel Homes Bhopsl       </a>   </div>
+                      <div><a href="">Zostel Homes Indore       </a>   </div>
+                      <div><a href="">Zostel Homes Delhi        </a>   </div>
+                      <div><a href="">Zostel Homes Gangtok      </a>       </div>
+                      <div><a href="">Zostel Homes Jaipur       </a>    </div>
+                      <div><a href="">Zostel Homes Goa          </a>  </div>
+                      <div><a href="">Zostel Homes Leh          </a> </div>
+                      <div><a href="">Zostel Homes Spiti        </a>      </div>
+                      <div><a href="">Zostel Homes Cochin       </a>     </div>
+                      <div><a href="">Zostel Homes Raipur       </a>     </div>
+                      <div><a href="">Zostel Homes Shimla       </a>     </div>
+                      <div><a href="">Zostel Homes Odisha       </a>     </div>
+                      <div><a href="">Zostel Homes Ooty         </a>         </div>
+                      <div><a href="">Zostel Homes Mysore       </a>    </div>
+                      <div><a href="">Zostel Homes Mumbai       </a>     </div>
+                      <div><a href="">Zostel Homes Chennai      </a>       </div>
+                      <div><a href="">Zostel Homes Kerala       </a>             </div>
+                      <div><a href="">Zostel Homes Punjab       </a>    </div>
+                      <div><a href="">Zostel Homes Kolkata      </a>   </div>
+                        </div>
+                      
+                    </div>
+                </li>
+                <li>
+                    <h3>Zostel Plus</h3>
+                    <div id="icon3">
+                        <i class="fa-solid fa-angle-down" ></i>
+                    </div>
+                   
+                    <div id="dropdown3">
+                      <div><a>Zostel Plus Bit</a></div>
+                      <div><a>Zostel Plus Masoorie</a></div>
+                      <div><a>Zostel Plus Manali</a></div>
+                      <div><a>Zostel Plus Panchgani</a></div>
+                    </div>
+
+                </li>
+                <li class="navhidden"><h3>Longstays<h3></li>
+                <li class="navhidden"><h3>Franchise<h3></li>
+                <li class="navhidden">
+                    <h3>Join us<h3>
+                        <div id="icon4">
+                            <i class="fa-solid fa-angle-down" ></i>
+                        </div>
+                       
+                        <div id="dropdown4">
+                          <h4>Careers</h4>
+                          <h4 style="font-size: 16px" margin-left=20px>Zostel Internship 2022</h4>
+                        </div>
+                    </li>
+                <li class="navhidden"><h3>Blog</h3></li>
+            </ul>
+        </div>
+        <div id="navlogin">
+            <h3>\z/ <span> <a href="login.html">Zo World</a></span></h3>
+            
+        </div>
+        <div id="navhamup" >
+          <p>hy</p>
+          <p>hy</p>
+          <p>hy</p>
+          <br>
+        </div>
+
+    </div>
+    <!-- START OF SLIDE SHOW -->
+    <!--  -->
+    <!--  -->
+    <div id="slideshow">
+        <p>Live it. Now</p>
+        <div class="slides">
+            <img src="https://img.cdn.zostel.com/cache/_59a0044cad4d16d4f4075657c2adb902/5_1_1400x600.jpg" alt="slide1">
+        </div>
+        <div class="slides">
+            <img src="https://img.cdn.zostel.com/cache/_0c130a41e670628551785b66a116ca0f/048_Exterior_04_1400x600.jpg" alt="slid2">
+        </div>
+        <div class="slides">
+            <img src="https://img.cdn.zostel.com/cache/_bf6718c9924a17253c3e7a8bcc4640d8/Landing_Page_Photo_1400x600.jpg" alt="slide3">
+        </div>
+        <div class="slides">
+            <img src="https://img.cdn.zostel.com/cache/_606bf1e904105f3f61aa7abae817ba89/2_1400x600.jpg" alt="slide4">
+        </div>
+        <div class="slides">
+            <img src="https://img.cdn.zostel.com/cache/_1702bd3ab45e20acabe0c783694e8c73/4_1400x600.jpg" alt="slide5">
+        </div>
+    </div>
+    <!-- Start of slideshow 2 -->
+    <div id="destination">
+        <div class="slides2" id="placesbox1"></div>
+        <div class="slides2" id="placesbox2"></div>
+        <div class="slides2" id="placesbox3"></div>
+        <div class="arrowbox">
+            <div class="arrowbox1">
+                <i class="fa-solid fa-angle-left" onclick="destinyclick(-1)"></i>
+            </div>
+            <div class="arrowbox1">
+                <i class="fa-solid fa-angle-right" onclick="destinyclick(1)"></i>
+            </div>
+        </div>
+       
+    </div>
+    <!-- end of slideshow 2 -->
+
+</body>
+</html>
+<script src="slideshow1.js"></script>
