@@ -289,3 +289,133 @@ function placesdisplay(n){
    if(destinyslide<=0){destinyslide=tot_slides.length}
 tot_slides[destinyslide-1].style.display="grid";
 }
+//start of launbox//
+ var launchbox1=[
+   {
+      id :1,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220609105243.jpg",
+      p1:"Introducing Zostel",
+      p2:"Banikhet !",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   },
+   {
+      id :2,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/12/20220602142833.jpg",
+      p1:"Introducing Zostel",
+      p2:"Home Chamera! ",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book No"
+   },
+   {
+      id :3,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220517103001.jpg",
+      p1:"Introducing Zostel",
+      p2:"Back !",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   },
+   {
+      id :4,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/10/20220506075541.jpg",
+      p1:"Introducing Zostel",
+      p2:"Vashist!",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   },
+   {
+      id :5,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220425080935.jpg",
+      p1:"Introducing Zostel",
+      p2:"Homes Ramgarh !",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   }
+ ]
+ var launchbox2=[
+   {
+      id :1,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220411133518.jpg",
+      p1:"Introducing Zostel",
+      p2:"Banikhet !",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   },
+   {
+      id :2,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220407125957.jpg",
+      p1:"Introducing Zostel",
+      p2:"Home Chamera! ",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book No"
+   },
+   {
+      id :3,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220406093327.jpg",
+      p1:"Introducing Zostel",
+      p2:"Back !",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   },
+   {
+      id :4,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/5/20220328084209.jpg",
+      p1:"Introducing Zostel",
+      p2:"Vashist!",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   },
+   {
+      id :5,
+      image:"https://img.cdn.zostel.com/zostel/cards/whats_new/None/20220325141837.png",
+      p1:"Introducing Zostel",
+      p2:"Homes Ramgarh !",
+      p3:"Explore Chamba Valley with our colourful new hostel in Banikhet, perfect for backpackers and workationers.",
+      p4:"Book Now"
+   }
+ ]
+ var launchboxone=document.querySelector("#launchbox1")
+ var launchboxtwo=document.querySelector("#launchbox2")
+ launchdisplay(launchbox1,launchboxone);
+ launchdisplay(launchbox2,launchboxtwo);
+
+ function launchdisplay(data,places){
+   data.map(function(elem){
+      var div1=document.createElement("div");
+      var img=document.createElement("img");
+      img.setAttribute("src",elem.image);
+      var p1=document.createElement("p");
+      p1.innerText=elem.p1;
+      var p2=document.createElement("p");
+      p2.innerText=elem.p2;
+      var p3=document.createElement("p");
+      p3.innerText=elem.p3;
+      var button1=document.createElement("button")
+      button1.innerText=elem.p4
+      div1.append(img,p1,p2,p3,button1);
+      places.append(div1);
+
+   })
+ }
+   // document.querySelector(".launchclasss").style.display="block";
+var launchslides=0
+displaylaunch(launchslides);
+//function clickdisplay(m){
+//  displaylaunch(launchslides+=m)
+//}
+function displaylaunch(n){
+   var launchclasses=document.querySelectorAll(".launchclass");
+  for(var i=0;i<launchclasses.length;i++){
+     launchclasses[i].style.display="none";
+  }
+ launchslides++;
+  if(launchslides>launchclasses.length){
+     launchslides=1
+  }
+  //if(launchslides<=0){
+  //   launchslides=launchclasses.length;
+  //}
+  launchclasses[launchslides-1].style.display="grid"
+ setTimeout(displaylaunch,2000);
+}
+ 
