@@ -60,13 +60,96 @@
             font-size: 16px;
             font-weight: 500;
         }
-        #showMore{
-            /* margin-left: 45%; */
-        }
+        
         #showless{
             display: none;
             text-align: center;
             margin-left: 45%;
+        }
+        #box1>h1{
+            margin-top: -10px;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #box1 span{
+            color: #F15824;
+        }
+        #imagebox{
+            margin-top: 7%;
+            display: flex;
+width: 49.8%;
+height:380px;
+margin-left: 2.2%;
+overflow: hidden;
+        }
+        #imagebox>img{
+            max-height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+        #box2>div:nth-child(2){
+            height: 275px;
+            width: 48%;
+            background-color: white;
+            border: 0px solid black;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: absolute;
+            left: 48%;
+            top: 30%;
+        }
+        #box2{
+            display: flex;
+            position: relative;
+            
+        }
+        #box2>div:nth-child(2)>h3{
+            font-size: 16px;
+            font-weight: 600;
+            color: grey;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #box2>div:nth-child(2)>h2{
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: -15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #box2>div:nth-child(2)>P{
+            font-size: 16px;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: grey;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        #box2>div:nth-child(2){
+            padding-left: 20px;
+            padding-right: 20px;
+         
+        }
+        *{
+            box-sizing: border-box;
+        }
+        #last{
+            font-size: 20px;
+            font-weight: 500;
+            /* padding-top: 30px; */
+            padding-top:4%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: black;
+        }
+        #box2>div:nth-child(2)>button{
+         position: absolute;
+         background-color: #F15824;
+         font-size: 16px;
+         font-weight: 700;
+         color: white;
+         top: 68%;
+         width: 98px;
+         height: 44px;
+         left:80%;
+         border-radius: 10px;
         }
     </style>
 </head>
@@ -90,13 +173,30 @@
         <h2>Fun Facts</h2>
         <div>“The last Mughal Capital”, “The City of Gates”, “The Tourist Capital of Maharashtra”- Aurangabad goes by many nicknames that reveal its historical significance, beauty, and culture alike.
 
-            The Bibi Ka Maqbara, often confused with the Taj Mahal, is a gorgeous monument in Aurangabad. It was built by Aurangzeb’s son and he dedicated it to his mother. The fun fact is, it was built for a prize 45 times less than the Taj Mahal!
+            The Bibi Ka Maqbara, often confused with the Taj Mahal, is a gorgeous monument in Aurangabad. It was built by Aurangzeb"s son and he dedicated it to his mother. The fun fact is, it was built for a prize 45 times less than the Taj Mahal!
             
             Aurangabad was a gated city, with 52 mammoth gates protecting it on all of its borders. Some of these gates still exist in the old city, depicting different stories through their architecture.</div>
             <button id="showless"><h4>Show Less</h4></button>
             </div>
           
             </div>
+            <div id="box1"><h1>Stays around <span>Aurangabad</span></h1></div>
+            <div id="box2">
+            <div id="imagebox">
+                <img src="https://img.cdn.zostel.com/zostel/gallery/images/7x147f3PQmOuOrb_o1ez1A/zostel-aurangabad-20201105103524.jpg?w=1280" alt="">
+               
+            </div>
+            <div>
+                <h3>ZOSTEL</h3>
+                <h2>Zostel Aurangabad</h2>
+                <P>Stay with us at Zostel Aurangabad, the only backpacker hostel of Aurangabad.</P>
+                <P>Centrally-located, fun, social and affordable place to hang out with travellers from</P>
+                <P>around the world.</P>
+                <h3 id="last" style="font-size: 20px;color:black">Starting from $ 499 </h3>
+                <button>View</button>
+            </div>
+            </div>
+            
 </body>
 </html>
 <script>
@@ -105,6 +205,7 @@
         document.querySelector("#show").style.display="block"
         document.querySelector("#showMore").style.display="none"
         document.querySelector("#showless").style.display="block"
+        document.querySelector("#box1").style.marginTop="300px"
     }
     document.querySelector("#showless").addEventListener("click",displaycontent1)
     function displaycontent1(){

@@ -398,23 +398,23 @@ tot_slides[destinyslide-1].style.display="grid";
    })
  }
    // document.querySelector(".launchclasss").style.display="block";
-var launchslides=0
+var launchslides=1
 displaylaunch(launchslides);
-//function clickdisplay(m){
-//  displaylaunch(launchslides+=m)
-//}
+function clickdisplay(m){
+  displaylaunch(launchslides+=m)
+}
 function displaylaunch(n){
    var launchclasses=document.querySelectorAll(".launchclass");
   for(var i=0;i<launchclasses.length;i++){
      launchclasses[i].style.display="none";
   }
- launchslides++;
+ //launchslides++;
   if(launchslides>launchclasses.length){
      launchslides=1
   }
-  //if(launchslides<=0){
-  //   launchslides=launchclasses.length;
-  //}
+  if(launchslides<=0){
+     launchslides=launchclasses.length;
+  }
   launchclasses[launchslides-1].style.display="grid"
  setTimeout(displaylaunch,2000);
 }
