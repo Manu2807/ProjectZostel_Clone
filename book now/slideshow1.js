@@ -418,4 +418,9 @@ function displaylaunch(n){
   launchclasses[launchslides-1].style.display="grid"
  setTimeout(displaylaunch,2000);
 }
- 
+var username=localStorage.getItem("username")
+ if(username.length!="0"){
+   document.querySelector("#username").innerText=username;
+   document.querySelector("#hello").innerText="Hello!";
+   document.querySelector("#username").style.color="#F15824";
+ }

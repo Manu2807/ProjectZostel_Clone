@@ -17,6 +17,7 @@ background-color: rgba(96, 55, 114, 0.986);
 width: 400px;
 height: 400px;
 opacity: 1;
+/* display: block; */
 margin-top:10%;
 margin-left:35%;
 transition: 0.5s ease-in;
@@ -32,9 +33,10 @@ padding-top: 50px;
     width:30%;
     height:400px;
     opacity: 0;
+    /* display: none; */
     background-color:rgb(6, 8, 8);
     transition: 1s ;
-    border:0px solid;
+    /* border:0px solid; */
     /* background-color: white; */
     margin-left: 35%;
     margin-top: -50%;
@@ -44,58 +46,74 @@ padding-top: 50px;
     font-size: 16px;
     color:white;padding-left: 0px;
     text-align: center;
-    /* z-index: 100000; */
+    z-index: 100000;
     
     background-repeat: no-repeat;}
 input{
     width: 80%;
     height: 30px;
     margin-bottom: 20px;
-
+    font-size: 16px;
 border: 1px;
 z-index: 400000;
-
+border-radius: 10px;
+background-color: white;
+/* opacity: 1; */
+padding-left: 10px;
 }
-input:hover{
-    background-color: orangered;
+form{
+    box-sizing: border-box;
+    /* opacity: ; */
 }
 
     </style>
 </head>
 <body>
-   <div id ="loginpage"> 
+    <div id ="loginpage"> 
    <h1>Welcome</h1>
    <h1>TO</h1>
    <h1>Zostel !</h1>
-</div>
+</div> 
    <div id ="loginpage1">
     
-<h1>Enter your user name</h1>
-<!-- <form > -->
-    <!-- <input type="text" placeholder="Enter your name">; -->
-   
-    <!-- <input type="submit"> -->
-   
-<!-- </form> -->
-<!-- <a href="signup.html"><Button>Submit</Button></a> -->
-<!-- <input type="text" placeholder="Enter your name"> -->
+<h1>Enter your username</h1>
+<form >
+    <input class="input" type="text" placeholder="Enter your name">
+   <!--  -->
+    <input type="submit" value="Save username ">
+   <!--  -->
+</form>
+
 
    </div>
 </body>
 </html>
 <script>
+
   setTimeout(backdisplay,1000)
      function backdisplay(){
         document.querySelector("body").style.backgroundImage = "url(https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg?auto=compress&cs=tinysrgb&w=600)"
         document.querySelector("#loginpage").style.opacity="0";
-        document.querySelector("#loginpage1").style.marginTop="-35%";
+        document.querySelector("#loginpage1").style.opacity="1" 
+        document.querySelector("#loginpage1").style.marginTop="-25%";
         document.querySelector("#loginpage1").style.marginLeft="35%" 
         document.querySelector("#loginpage1").style.height="400px" 
-        document.querySelector("#loginpage1").style.opacity="1" 
-      var input=  document.createElement("input");
-      input.setAttribute("type","text");
-      document.querySelector("#loginpage1").append(input);
-    }
+        // document.querySelector("#loginpage").style.marginTop="0%"
+        // document.querySelector("#loginpage").style.marginLeft="0%"
+        document.querySelector("#loginpage").style.height="0%"
+        document.querySelector("#loginpage").style.width="0%"
        
+     
+    }
+    
+    document.querySelector("form").addEventListener("submit",storeusername);
+    function storeusername(){
+        event.preventDefault()
+         var username=document.querySelector("input").value;
+         console.log(username)
+         localStorage.setItem("username",username)
+         window.location.href="http://127.0.0.1:5500/ProjectZostel/book%20now/signup.html?"
+         console.log(window.location)
+    }
     
 </script>

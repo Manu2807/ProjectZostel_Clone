@@ -151,6 +151,91 @@ overflow: hidden;
          left:80%;
          border-radius: 10px;
         }
+        /* styling of footer */
+        #footer{
+            margin-top: 60px;
+        color: white;
+        /* height:250px; */
+        background-color: rgb(45,55,72);
+        display: grid;
+        grid-template-columns: 27% 41% 29% ;
+        gap: 30px;
+        padding: 50px 5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /* padding-top: 50px; */
+        
+    }
+
+
+    #footer__left h2{
+font-size: 26px
+    }
+#footer__left__logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#footer__left{
+     margin-left: 15px;
+}
+#footer__left p{
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: .025em;
+   
+}
+
+#mid__links{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+#mid__links a{
+    color: white;
+    text-decoration: none;
+   font-size:18px;
+   padding: 5px;
+}
+
+/* #footer__mid{
+    margin-left:40px ;
+} */
+
+.h2__grey{
+    color: rgb(203,213,224);
+}
+
+#social__icons i{
+    font-size: 45px;
+    padding: 5px;
+}
+
+#footer__right h4{
+   margin-left: 40px;
+}
+@media screen and (min-width:600px) and (max-width:1100px){
+    #footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #footer__right{
+margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:600px){
+    #footer{
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    #footer__right,#footer__mid{
+margin-left: 20px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -183,7 +268,7 @@ overflow: hidden;
             <div id="box1"><h1>Stays around <span>Aurangabad</span></h1></div>
             <div id="box2">
             <div id="imagebox">
-                <img src="https://img.cdn.zostel.com/zostel/gallery/images/7x147f3PQmOuOrb_o1ez1A/zostel-aurangabad-20201105103524.jpg?w=1280" alt="">
+                <img src="https://img.cdn.zostel.com/zostel/gallery/images/7x147f3PQmOuOrb_o1ez1A/zostel-aurangabad-20201105103524.jpg?w=1280"  alt="logo">
                
             </div>
             <div>
@@ -193,9 +278,48 @@ overflow: hidden;
                 <P>Centrally-located, fun, social and affordable place to hang out with travellers from</P>
                 <P>around the world.</P>
                 <h3 id="last" style="font-size: 20px;color:black">Starting from $ 499 </h3>
-                <button>View</button>
+                <button><a  style="color:white" text-decoration:none" href="book.html">View</a></button>
             </div>
             </div>
+            <div id="footer">
+                <div id="footer__left">
+            <div id="footer__left__logo">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACCCAMAAAC93eDPAAAAe1BMVEX////wVEH+///yVEDwUDzwTTjxSzT4sqrvSzX4xL7wRi///Pz+//3wQyrxSTL2pJzydGX1jIL96ef1iXzzfG/85OL+9PP4oJf97+3xYE/3lIvyXUv2mZDxWUb708/xQSb6zMj5vrj0bF3829nvOhz4q6T1g3fvNRD6uLT8Z5DYAAAMA0lEQVR4nO1bi3KqyhKFmQGRVxTfT1TUnf//wttrNSZmO+TsFKZStyrr7JOoCDQ9/Vw9CYJf/OIXv/i/RhbkP3p/Y4JJY35UhCAY1qMfFmG+iuqDaOMHRdjGYTTKzA+K0NQ2DOvhzwkgy+DCMHSn+c9p4SW1ooUwHvzrCc8W1TQOAogaoqzr2lmWyf/BXLGsiBnQZE+QIDhFoSK+BMYToMzotNqsBBv9mo1iQRIXgvOovwS5uZS8LH4US68aNpEFnLPvCPnPuln/RTEVDMFtxomsRrzwaSFY2dALa8ttbwEE1yi0YXHJaJH+h+oUIYyfoITgWNMfM/NaimaTic/cXY1lL+pCrbY+n88FpUovvSUwZrZDSCgaebkSx7DRXqzj768dhkQzxG2j06yaVQdLA+rvDiYYy7OH0VrMMjjGIoIbPajB6Afy4xLLfUsG0XHMQPIEWzwwKLkTPCM4IT6cm84vV/hudMLrJoEN7zrjyD8LYOaJGlp9xPs91tqe/MoVV5kk0H0DpxnRho99yxzDBKmmvZrLB9kUwaHoyFZmeZYnV3vdw4YltfYTANirXcuPgumhwXvnv3IerEVACUWyZJTVosDoqYU8OzmJLlEEK9wsod8rXqevJn+8tJlhmcqFLJ85nOGb0363J7alaDYe0xPSFyOPNEsQc+3c9+0rLUEOmTnttn5Csalq31WsFqxdomYaizhh8uIpn/awk4R57BVuFF17CxDQB20qRnBUFeO2MxiGLR9qF0MfcCFqu2zH9Wv6Vg0meEGxFsmCmmwENdRLfP6S6op/RB4coJ7yiLtKgJL8NPZE0a9BLroSfSYzvsSSxGtIttxpCv5LYCOW23rhPIKidlX/7CDXWrviwusHU3qCZL3cDFKRIRmbj/52wFqle5z2gvIiXTwhQxqE51vJIwFCVndCcQrPSsN9Q3eFxiqEZhsu+0tAKcyb5TMuxge8PJatjbxBMlgqn/2p8Ab5CUb87A5UK1hHpfCJofT3o+K2WBwophHHsJKfniwAkzYCT8H7DlMmgLujAwSvsII+pghe5evTJRArnLm3pC0+apmtbrrO8D59ectPriOZ9pVhiyeth8gUzRn56HQrBgx8QHIp3lK69Hs6P1OhUG97Omar8tg6xVIMARVFLi5Uy4K4ae9KpQMvqB1SrjK7XLdqs9VCXMStGJUYRsVivomQYdRzG94X9ZGUxwGWv0K4RG0QSH6CoU6Nt9l4AsTuERuYHjRbJXNWKjH9Q+4639BdZ9/GhBhN2jV5r0UK31sgYrBmFd3nWkBLePBCTvIUOl+TQPSMRBCjdlHjtE5qCKwJbivOWrOL7EjSCLR9RTAaF22JOGwurCHWtEz5CKu/SPCys4mcbw/9JCAOCDxM2qxLJDg0VwkEJaooU2EZ3M6bn/Ige3Xp6gmNTUA1aLEA45Q4AdUncyhh/eYlnjObUeqeEbdzc2CWZFVINYQMhhe0dExkNs28LI9p697egVvC3wjBodyjYBm2TYZb8aAeOXbxggNUHOW6f4OnSVuKhVy6jKnyP+kQlrCP7S1Gek/NkM/FdnoHTu0bw5oVGo2TjCjoJlhJfOxwvNwYKi2+doQt86HW/Ty8VnBGByJWKkqGKtQQhuJ0tHrtZUmalYfgPyjB/14qs0DtIukYq1LfgqFWUkVn348TZzTfnfdgdhwMBsfhcHjcAw3pQhKHS4JUYkbIt5dFS/wEpKEKeuiR+ckfmjPlJLNgC6YgHXgN9vInLZQsAs5ECYQ7weoETIHrZDIZ70jEHhEuZxHiVA5bgwjbAfGiWCsmxFXOZjnTVVtvnH3nzCyzIGjDsGUTnbMuwq8IUObNkpZfpxXs71LinDBKU0oeE4kgSiKF41Usg7pPC4YF6ZdgSxIOswt7HtdB+nnPTPx57EbxWvuPF5PvsVjAxcxL/BXpEx/vYMBq4WiUlmlKg6BpQK9peVPqTaeq16h44e3lR1W6e+gX2i8miriUS8RJCeoyLIdex1MWaa8suvxr4BskE19hYRfY10KMa6vmNRJMb3z0Qg12xA9psgKa4nbdmuZFDfU4sGj8/I1OA1dD0/gfaDnGm4cG9IcPePuiF+QGJK95DucTEFT3XdrbkY+veHKu4TRXEW731OP5TTKvHMsNHa3yPV1zRu88fbuh+XD//PayFR+/zO0Tvfnt3ub9bPzK74I/TjoWsIa1JwugaRQZ0q5ka3y/8g9idiUg/sh0WiOhdgVuoNw/flubRmt3oxZTxWRMrBeKwSswOB4E+6x9EjFdvD8MefQF39vyLL0EL0eDPWFys4NTaNH/gC2HL849ephAA16ctpBQ/od1KqS4nFP1Yh7SyHgXE10bGRVOg4PXMU21+0KMa6uTina1cl8JTYT113CXxzDdKZQ4DxtplpH7tDOq2o63FlzAoxqkH2MGij8g+YA41idWtntYxmxhwWuEbVazdyuYxDwlfjsZ0DQWpbNHEfKAozh3bWcsxHHwNyaQAZyexKSdE7sCu6N5KmGLtXtP7uP1Wv6pIQ/aomQ41Kpk/zjsg2E5VGKbu4T+6KLZCbGleEWKQqirjziTppx8Msy9ixZ6za7+bsjeubMlQ2hZaP+O3rah0siuaE8d+YLeF9E2jZ9whuyjdVqWXUmzav9EmlpbvZ4YImknnVfK0bBYG6/RObR1DgO+MVADCNG+MGbKCVjVVcdjVhm6kKSObWslcQ5JBHTMaOWdaX8BklHkSpiHdvQD8whRPAHdZ7bJzcdjhohrIgqJX5/QPEvtYssuu1rQ8BGOzAy9i3W0QnVMThPtE8i2piiLhW+3hvRkDcu7kiEB3HxYvLKhOg8xrGqrkd4S5MF4Pe9gajKOnIoB036Npb9ydGkRSsRDWI3EnqD3RZgM9Y/XppTUCOENyxUyO7i1a9Q+u3T79W2ZvgvLhE95wGsyKqSVOBq04QxLscLiRIdv23Ojz1uyb3xnX3M1UWnaRYR9zI+/SwKdT8mqGxqFPHiqVPxyRQth4ctxffkEx/Qgx/gTZMJRbRHjKV10w6mkJbVgSMq6cOlJb08Atza5Ewrm5c7qsEzvQ0exNePVBbOz1L/hpS8apqQaM/FW3bcAICYAy8BsX0QiDRf1Z5QeYIJRomkcxBbzxOouDE5oqOwxyShF0+cT4dKAtC4gKtbS4G7wYiruMNEWaYSuLDk8W4JgTra3PsASBmiHkg/MmUHRBPsU9YP8IxWpLd+z7NKs4fvRBAtcxaxS7/NYrkNC+4fcxRYOUlxurdY+f4Z7mH3CsrvCQ2FY2O7puAO3C4AKzHVI43YsOSRop9PZE2TIyMHEdIFDYkMPyZqN3na5YKXa4C2fr1wSXfon8EHaukAeqC1qG3MPUpBtKZvTcGLWcODB7HnbV4QlCin0wqLXl5hFleeSyCCcFOXmkKKMBKM0i7mPwL898N/B1bclNy9UDAmbx5oKFCTu5lDOGO5qQePKYq449hPgtp/K0bxaW3x8KImZ3AIVjY3I0NAxNwGnFwjq/WLlnIkQ6YkTCOQJ7wYRo91M3UAl24J7gDSzzfrtKJFygAs7wlYG9f5zxw5GMyRjxoy51FSBSjPpu+fSzMD3ti3KgrY47khB7aabFCtvXou2k2eB0Q/KR25RE1X0DNfV7UmP+Qel7IqjCqohxDS9lyHIucfzm7sHGn0+M+8rt8du4RRMp9r/9sNSI9EQY5ujpuHPLjkjey99EP6WgUG97lnSi2Wn4W2nmO5J77LFFtptccPR4nOe4F+xR2ThzjnMyZGjMbb/JOnMOdiAYzbMJWHvTfRgKWFgp9MUc2EbxsfDft80s8q71U/8f4jCFht/TpHVFewnwaBl4EheaSMfxTGbax9dBv1oz5cOUb9JDdPzDyrMsuyk/Mqu5tXstdtYwRbL3rY4Lj8MrD6I0E1scQsue34vs/glEfab1W7nojTV6UzyPuOyn0WH2U1ut+kbEsx8ieEMKe7XwWIxnoDQPp1Wm3Dn6k4RDHoeqq0cPqGZQBfPwcPNpkwwbwXr5OTylv8L46npK0J+9+t9CmHa/z4DaQZre+boXsAQ3z6B8OmDffmzf1zEPQ6lbvb6QREq7e1+DpIXBv1pt1/84he/+EH8D8qjtjvWPueMAAAAAElFTkSuQmCC" style="width: 60px; height: 60px;" alt="">
+                <h2>Z&nbsp;O&nbsp;S&nbsp;T&nbsp;E&nbsp;L</h2>
+            </div>
+            <p>Explore with Zostel - oldest & the biggest backpacker hostel brand of India. Travel India & Nepal on budget while having fun at our quirky, activity-led hostels.</p>
+                </div>
+                <div id="footer__mid">
+            <h3 class="h2__grey">USEFUL LINKS</h3>
+            <div id="mid__links">
+                <a href="#">Zostel Homes</a>
+                <a href="#">Destinations</a>
+                <a href="#">Community</a>
+                <a href="#">#ITravelGreen</a>
+                <a href="#">Franchise</a>
+                <a href="#">Manger</a>
+                <a href="#">Guest Policy</a>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Support</a>
+                <a href="#">Careers</a>
+                <a href="#">Passport</a>
+                <a href="#">Terms</a>
+            </div>
+                </div>
+                <div id="footer__right">
+            <h3 class="h2__grey">SOCIAL</h3>
+            
+            <div id="social__icons">
+                <i class='bx bxl-facebook-circle' style='color:#3251cc'  ></i>
+                <i class='bx bxl-instagram' style='color:#cc3255'  ></i>
+                <i class='bx bxl-twitter' style='color:#1f9fd9'  ></i>
+                <i class='bx bxl-youtube' style='color:red'  ></i>
+            </div>
+            <h4>Zostel © 2022. All Rights Reserved</h4>
+                </div>
+               </div>
             
 </body>
 </html>
