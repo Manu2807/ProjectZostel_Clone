@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart items</title>
+    <style>
+        #book1>div:first-child{
+            border: 1px soild black;
+            /* width: 64%; */
+            height:20;
+            /* border: 1px solid black; */
+            background-color:#E8F0F2;
+            position: sticky;
+            top:0;
+            z-index: 23;
+        }
+        #mainbook{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            background-color: #E8F0F2;
+        }
+        #book1{
+            width: 64%;
+            position: relative;
+            background-color: #E8F0F2;
+        padding-left: 2%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #book1>div>h3{
+            color: #485D5B;
+            font-size: 16px;
+            margin-top: -02%;
+            /* background-color: aqua; */
+        }
+        
+        .container{
+            display: grid;
+            grid-template-columns: 25% 55% 16%;
+            gap: 20px;
+            background-color: white;
+            margin: 15px 4px;
+           
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        .containerBtn{
+            background-color:rgb(241,88,36);
+            color: white;
+        padding: 10px;
+        outline: none;
+        border: none;
+        font-weight: 600;
+        border-radius: 8px;
+
+        }
+        #book2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width:32%;
+            /* height:470px; */
+            /* background-color:rgb(177, 142, 142); */
+            /* border: 1px solid white; */
+            /* margin-left: 50%; */
+            margin-top: 40px;
+            position: fixed;
+            margin-left: 67%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #book2>h1{
+            font-size: 24px;
+            font-weight: 700;
+        }
+      #book2>div:last-child{
+        width:80%;
+    padding: 03%;
+        background-color:rgb(240, 86, 29);
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: white;
+      }
+      #rooms{
+        overflow: scroll;
+      }
+      #book2>div>img{
+        margin-left: 20%;
+        /* background-color: aqua; */
+        /* margin-top: 10%; */
+      }
+      .qtdiv{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        #payDetails{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div  style="width: ;" id="img">
+        <img src="https://img.cdn.zostel.com/zostel/gallery/images/7x147f3PQmOuOrb_o1ez1A/zostel-aurangabad-20201105103524.jpg?w=1280" alt="">
+    </div> -->
+    <div id ="mainbook">
+    <div id="book1">
+        <div>
+            <h1>Book your stay</h1>
+            <h3>Select from a range of beautiful rooms</h3>
+        </div>
+        <div id="rooms">
+           
+        </div>
+    </div>
+    <div id="book2">
+      <h1>Summary</h1>  
+      <div>
+        <img id="cartlogo" src="https://book.zostel.com/static/media/gray-zobu.018014d9.svg" style="width: 144px;" alt="">
+        <h3 id="carth3" style="color:grey;margin-left: 20%;">No room selected</h3>
+       
+      </div>
+      <div id="payDetails">
+        <h3 class="totalprice">Total Rent</h3>
+        <h3 id="h34"></h3>
+        <h3>Tax:</h3>
+        <h3 id="h31"></h3>
+        <h3>Total(tax incl.)</h3>
+        <h3 id="h32"></h3>
+        <h3>Advance Payment</h3>
+        <h3 id="h33"></h3>
+        
+        
+      </div>
+      <div ><a style="color: white; text-decoration: none;" href="payment.html">Book Now</a></div>
+    </div>
+    </div>
+
+    <script>
+        var hostelData = [
+    {
+        id: 1,
+        title: "8 Bed Mixed Dorm (Shared Washroom)",
+        body: "A bed in 8 Bed Mixed Dorm (Shared Washroom)",
+        price: 549,
+        img:"https://img.cdn.zostel.com/zostel/gallery/images/ExdjVOq5QoKgErsrSj5bnw/8-bed-mixed-dorm-20210315023128.jpg?w=200"
+    },
+    {
+        id: 2,
+        title: "10 Bed Mixed Dorm (Shared Washroom)",
+        body: "A bed in 10 Bed Mixed Dorm (Shared Washroom)",
+        price: 999,
+        img:"https://img.cdn.zostel.com/zostel/gallery/images/FCiPz3umRVGjQsF5bECAlw/deluxe-twin-bed-private-room-ensuite-20210315023422.jpg?w=200"
+    },
+    {
+        id: 3,
+        title: "Deluxe Private Room (ensuite)",
+        body: "A Deluxe Private Room (ensuite) with Double Bed",
+        price: 1999,
+        img:"https://img.cdn.zostel.com/zostel/gallery/images/7QT9-qdaQGiZcEk6kJUOhQ/zostel-aurangabad-10-bed-mixed-dorm-20201112104618.jpg?w=200"
+    },
+    {
+        id: 4,
+        title: "Royal Palace Room (ensuite)",
+        body: "A Royal Room (ensuite) with Double Bed",
+        price: 1329,
+        // img:"https://img.cdn.zostel.com/zostel/gallery/images/7QT9-qdaQGiZcEk6kJUOhQ/zostel-aurangabad-10-bed-mixed-dorm-20201112104618.jpg?w=200"
+       img:"https://img.cdn.zostel.com/zostel/gallery/images/ExdjVOq5QoKgErsrSj5bnw/8-bed-mixed-dorm-20210315023128.jpg?w=200"
+    },
+    
+]
+var total=document.querySelector('.totalprice');
+
+var pricearr=JSON.parse(localStorage.getItem('pricearr')) ||[];
+
+
+let totalPrice=pricearr.reduce((acc,val)=>acc+=val,0);
+//total.innerText= "Total : "+totalPrice
+document.querySelector("#h31").innerText=totalPrice*0.05;
+document.querySelector("#h32").innerText=Math.ceil( totalPrice+(totalPrice*0.05));
+document.querySelector("#h33").innerText=Math.ceil(totalPrice*0.4);
+document.querySelector("#h34").innerText=Math.ceil(totalPrice);
+// document.querySelector("#finalpayment").innerText=document.querySelector("#h33").innerText;
+var advance =document.querySelector("#h33").innerText;
+localStorage.setItem("advance",advance)
+console.log(localStorage.getItem("advance"))
+
+        var rooms=document.getElementById('rooms');
+for(let i=0;i<hostelData.length;i++){
+    let container=document.createElement('div');
+    let div1=document.createElement('div');
+    let div2=document.createElement('div');
+    let div3=document.createElement('div');
+container.className='container'
+    container.append(div1,div2,div3);
+
+    let img=document.createElement('img');
+    img.src=hostelData[i].img;
+    div1.append(img);
+
+    let h2=document.createElement('h2');
+    h2.innerText=hostelData[i].title;
+    let p=document.createElement('p');
+    p.innerText=hostelData[i].body;
+div2.append(h2,p);
+
+let price=document.createElement('h3')
+price.innerText=`${hostelData[i].price}/night`
+
+// let btn=document.createElement('button');
+let qty=0;
+let qtdiv=document.createElement('div');
+let minusBtn=document.createElement('button')
+minusBtn.innerText='-';
+let plusBtn=document.createElement('button')
+plusBtn.innerText='+'
+let h3=document.createElement('h3')
+
+minusBtn.className='containerBtn'
+plusBtn.className='containerBtn'
+// if(qty==0) minusBtn.setAttribute('disabled',true)
+qtdiv.className='qtdiv'
+
+minusBtn.addEventListener('click',function(){
+     if(qty>=1){
+          qty--
+          h3.innerHTML=qty;
+    let val=-hostelData[i].price
+pricearr.push(Number(val));
+minusBtn.style.backgroundColor='rgb(241,88,36)'
+localStorage.setItem('pricearr',JSON.stringify(pricearr))
+let totalP=pricearr.reduce((acc,val)=>acc+=val,0);
+//total.innerText="Total"+totalP//
+document.querySelector("#h31").innerText=totalP*0.05;
+document.querySelector("#h32").innerText=totalP+(totalP*0.05);
+document.querySelector("#h33").innerText=totalP*0.4;
+document.querySelector("#h34").innerText=totalP;
+console.log(localStorage.getItem("advance"))
+// document.querySelector("#finalpayment").innerText=document.querySelector("#h33").innerText;/
+var advance =document.querySelector("#h33").innerText;
+localStorage.setItem("advance",advance)
+
+     }
+   
+    
+     else {
+      minusBtn.style.backgroundColor='grey'
+        
+        
+     }
+   
+
+
+})
+plusBtn.addEventListener('click',function(){
+     let logo=document.querySelector("#cartlogo");
+     let logo1=document.querySelector("#carth3");
+     let logo2=document.querySelector("#payDetails");
+     if(logo.style.display!="none"){
+        logo.style.display="none"
+     }
+     if(logo1.style.display!="none"){
+        logo1.style.display="none"
+     }
+     logo2.style.display="grid";
+    qty++ 
+    h3.innerHTML=qty;
+    minusBtn.style.backgroundColor='rgb(241,88,36)'
+    pricearr.push(Number(hostelData[i].price)); 
+    localStorage.setItem('pricearr',JSON.stringify(pricearr))
+    let totalP=pricearr.reduce((acc,val)=>acc+=val,0);
+//total.innerText="Total"+totalP;
+document.querySelector("#h31").innerText=totalP*0.05;
+document.querySelector("#h32").innerText=totalP+(totalP*0.05);
+document.querySelector("#h33").innerText=totalP*0.4;
+document.querySelector("#h34").innerText=totalP;
+console.log(localStorage.getItem("advance"))
+var advance =document.querySelector("#h33").innerText;
+localStorage.setItem("advance",advance)
+
+
+})
+h3.innerHTML=qty;
+console.log(qty)
+
+qtdiv.append(minusBtn,h3,plusBtn)
+// btn.innerText='Select Unit';
+div3.append(price,qtdiv);
+
+rooms.append(container)
+}
+
+
+
+    </script>
+</body>
+</html>

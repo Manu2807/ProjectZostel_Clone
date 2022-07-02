@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c8cbe03164.js" crossorigin="anonymous"></script>
+    <style>
+        img{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 43%;
+        }
+      #payment{
+        width:40%;
+        border: 1px solid #1492CC;
+        height: 680px;
+        margin-left: 30%;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }  
+      i{
+        margin: 5px;
+      }
+  #payment>h4{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+     background-color:  #0A719C;
+     padding: 8px;
+     font-weight: 400;
+     color: white;
+     text-align: center;
+     border-radius: 10px 10px 0px 0px;
+     margin-top: -1%;
+  }
+  #payment>h3{
+    width: 90%;
+    background-color: #f5f5f5;
+    padding-left: 10px;
+    padding-top: 3px;
+    /* padding-bottom: 3px; */
+    margin-left: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+  }
+  .amout{
+    width: 90%;
+    background-color: #f5f5f5;
+    padding-left: 10px;
+    margin-top: 3px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: -1%;
+  }
+  span{
+    margin-left: 30%;
+    font-weight: 200;
+  }
+  #payment>ul{
+    display: flex;
+  }
+  #payment>ul>li{
+    list-style: none;
+    margin-right: 20px;
+    color: #0A719C;
+    /* margin-left:-10px */
+  }
+  #details>div>ul>li{
+list-style: none;
+margin: 15px;
+color: #333333;
+font-size: 13px;
+/* text-align: center; */
+margin-top: 30px;
+  }
+  #details>div>ul>li:first-child{
+    margin-top: -8px;
+  }
+ #payment>ul>li:first-child{
+    /* border: 1px solid gray; */
+    padding-top: 10px;
+    margin-top: -10px;
+    margin-left:-20px;
+    font-size: 13px;
+    color:grey
+  }
+  #details{
+    display: flex;
+  }
+  input{
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+  }
+ #hone{
+    background-color: rgb(41, 41, 32);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  p{
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  #done>div{
+    background-color: #0055cc;
+    height: 30px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+justify-content: center;    margin: auto;
+    border-radius: 5px;
+  }
+  #done{
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+  .companylogo{
+    width: 80px;
+    height: 50px;
+    margin-left: 0px;
+    margin-right:30px;
+    /* display: inline; */
+  }
+  #company{
+    display: flex;
+justify-content: center;
+
+  }
+    </style>
+</head>
+<body>
+    <img src="https://api.juspay.in/images/juspay/jp-logo-v3.1.1.png" alt="">
+    <div id="payment">
+ <h4>Complete your payment</h4>
+ <h3><i class="fa-solid fa-cart-shopping"></i>Your transaction details
+    <hr>
+ </h3>
+ <h2 class="amout">Merchant <span>Zostel</span></h2>
+ <h2 class="amout" style="background-color: white">Order <span>5SODPSUWYV</span></h2>
+ <h2 class="amout" >Amount <span id="finalpayment"></span></h2>
+ <h3><i class="fa-solid fa-bag-shopping"></i>Payment options <hr></h3>
+ <ul>
+    <li>Credit/Debit Card</li>
+    <li>Net banking</li>
+    <li>Wallet</li>
+    
+ </ul>
+ <hr style="margin-top:-18px ;width:90%">
+ <div id="details">
+    <div>
+        <ul>
+            <li>Card number</li>
+            <li>Name on card</li>
+            <li>Expiry(mm/yy)</li>
+            <li>CVV</li>
+            
+        </ul>
+    </div>
+    <div>
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="Name">
+        <input type="date"> 
+        <input type="number">
+    </div>
+
+    </div>
+    <h3 id="hone" style="background-color:rgb(236, 236, 142) ;font-size:12px;font-weight:100"><input  style="display:inline;color: #1492CC;"
+        type="checkbox">(Save card details for future transactions.) </h3>
+        <div id="done">
+            <div>
+                <p id="done2">Make Payment </p>
+            </div>
+        </div>
+        <div id="company">
+            <img class="companylogo" src="https://w7.pngwing.com/pngs/354/902/png-transparent-credit-card-verified-by-visa-icon-thumbnail.png" alt="">
+            <!-- <img class="companylogo" src="https://w7.pngwing.com/pngs/354/902/png-transparent-credit-card-verified-by-visa-icon-thumbnail.png" alt=""> -->
+            <img class="companylogo" src="https://www.procreditbank.ba/wp-content/uploads/2019/08/mc_seccode_png-1.png" alt="">
+            <img class="companylogo" src="https://www.shredstation.co.uk/wp-content/uploads/2016/06/wpde1c5ccf_05_06.jpg" alt="">
+            <img class="companylogo" src="https://api.juspay.in/images/powered-by-juspay.png">
+       
+    </div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("#finalpayment").innerText=localStorage.getItem("advance")
+    document.querySelector("#done2").innerText= "Make Payment of "+localStorage.getItem("advance")
+    console.log(localStorage.getItem("advance"))
+    document.querySelector("#done2").addEventListener("click", displayalert);
+    function displayalert(){
+  alert("Payment Done");
+    }
+</script>
