@@ -13,9 +13,9 @@ var Studentinfo={
 }
 var info=JSON.parse(localStorage.getItem("data"))||[];
 info.push(Studentinfo);
-localStorage.setItem("data",JSON.stringify(info));
-//console.log(localStorage.getItem("data"));
-
+localStorage.setItem("data",JSON.stringify(info))
+console.log(localStorage.getItem("data"));
 alert("Sign up Successful");
+window.location.href='http://127.0.0.1:5500/ProjectZostel/book%20now/signin.html'
 
 }

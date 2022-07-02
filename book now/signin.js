@@ -11,6 +11,7 @@ return (elem.stuEmail==email&&elem.stuPassword==password);
 })
 if(check.length>0){
     alert("Log In Successful")
+    window.location.href="http://127.0.0.1:5500/ProjectZostel/book%20now/slideshow1.html"
 }else{
     alert("Incorrect Information")
 }
