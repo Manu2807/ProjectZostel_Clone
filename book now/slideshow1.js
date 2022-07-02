@@ -277,6 +277,7 @@ placesdisplay(destinyslide);
 
 function destinyclick(m){
 placesdisplay(destinyslide+=m)
+// document.querySelectorAll(".arrowbox1").style.opacity="1";
 }
 
 function placesdisplay(n){

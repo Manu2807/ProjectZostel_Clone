@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart items</title>
     <style>
         #book1>div:first-child{
             border: 1px soild black;
@@ -140,7 +140,7 @@
         
         
       </div>
-      <div ><a style="color: white; text-decoration: none;" href="">Book Now</a></div>
+      <div ><a style="color: white; text-decoration: none;" href="payment.html">Book Now</a></div>
     </div>
     </div>
 
@@ -188,6 +188,11 @@ document.querySelector("#h31").innerText=totalPrice*0.05;
 document.querySelector("#h32").innerText=Math.ceil( totalPrice+(totalPrice*0.05));
 document.querySelector("#h33").innerText=Math.ceil(totalPrice*0.4);
 document.querySelector("#h34").innerText=Math.ceil(totalPrice);
+// document.querySelector("#finalpayment").innerText=document.querySelector("#h33").innerText;
+var advance =document.querySelector("#h33").innerText;
+localStorage.setItem("advance",advance)
+console.log(localStorage.getItem("advance"))
+
         var rooms=document.getElementById('rooms');
 for(let i=0;i<hostelData.length;i++){
     let container=document.createElement('div');
@@ -238,6 +243,11 @@ document.querySelector("#h31").innerText=totalP*0.05;
 document.querySelector("#h32").innerText=totalP+(totalP*0.05);
 document.querySelector("#h33").innerText=totalP*0.4;
 document.querySelector("#h34").innerText=totalP;
+console.log(localStorage.getItem("advance"))
+// document.querySelector("#finalpayment").innerText=document.querySelector("#h33").innerText;/
+var advance =document.querySelector("#h33").innerText;
+localStorage.setItem("advance",advance)
+
      }
    
     
@@ -272,6 +282,9 @@ document.querySelector("#h31").innerText=totalP*0.05;
 document.querySelector("#h32").innerText=totalP+(totalP*0.05);
 document.querySelector("#h33").innerText=totalP*0.4;
 document.querySelector("#h34").innerText=totalP;
+console.log(localStorage.getItem("advance"))
+var advance =document.querySelector("#h33").innerText;
+localStorage.setItem("advance",advance)
 
 
 })
